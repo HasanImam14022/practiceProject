@@ -1,0 +1,62 @@
+﻿@model List<practiceProject.DAL.Tbl_Category>
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashbord</a>
+                        </li>
+                        <li class="breadcrumb-item active">Categories</li>
+                    </ol>
+                    <!-- Page Heading -->
+                    
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            
+                            <h6 class="m-0 font-weight-bold text-primary">Category Details</h6>
+                            <a href="#" class="btn btn-info pull-right fa fa-plus ">Add New</a> 
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>SL.No</th>
+                                            <th>Category Name</th>
+                                            <th>Action</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <tr>
+                                            <th>SL.No</th>
+                                            <th>Category Name</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@(Model.IndexOf(item)+1)</td>
+                                                <td>@item.CategoryName</td>
+                                                <td><a href="#">Edit</a></td>
+                                                
+                                            </tr>
+                                        }
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
